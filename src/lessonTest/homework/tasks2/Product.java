@@ -19,10 +19,12 @@ public class Product {
         if(quantity != 0 && quantity >= amount) {
             this.quantity -= amount;
         }
+        System.out.println(quantity);
     }
 
     public void restock(int amount) {
         quantity += amount;
+        System.out.println(quantity);
     }
 
     public void setName(String name) {
