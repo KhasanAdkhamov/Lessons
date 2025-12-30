@@ -1,4 +1,4 @@
-package lessonTest.homework.tasks2;
+package lessonTest.samples.student;
 
 public class Student {
     private String name;
@@ -31,7 +31,7 @@ public class Student {
     }
 
     public void setAge(int age) {
-        if(age < 16 && age > 100) {
+        if(age < 16 || age > 100) {
             throw new RuntimeException("age from 16 to 100");
         }
         this.age = age;
@@ -42,7 +42,7 @@ public class Student {
     }
 
     public void setAverageGrade(double averageGrade) {
-        if(averageGrade < 0.0 && averageGrade > 5.0) {
+        if(averageGrade < 0.0 || averageGrade > 5.0) {
             throw new RuntimeException("don't have enough rewards or too much, it's fake");
         }
         this.averageGrade = averageGrade;
