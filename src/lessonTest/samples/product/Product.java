@@ -1,4 +1,4 @@
-package lessonTest.homework.tasks2;
+package lessonTest.samples.product;
 
 public class Product {
     private String name;
@@ -16,9 +16,10 @@ public class Product {
     }
 
     public void sell(int amount) {
-        if(quantity != 0 && quantity >= amount) {
-            this.quantity -= amount;
+        if(quantity == 0 || quantity < amount) {
+            throw new IllegalArgumentException("product is 0");
         }
+        quantity -= amount;
         System.out.println(quantity);
     }
 
@@ -35,7 +36,7 @@ public class Product {
     }
 
     public void setPrice(double price) {
-        if(price < 0) {
+        if(price <= 0.0) {
             throw new RuntimeException("price should be more 0");
         }
         this.price = price;
