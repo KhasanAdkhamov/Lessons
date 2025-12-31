@@ -6,7 +6,7 @@ public class Rectangle {
 
     public Rectangle(double width, double height) {
         setWidth(width);
-        setHeight(height);
+        this.setHeight(getHeight());
     }
 
     public Rectangle(double width) {
@@ -34,28 +34,22 @@ public class Rectangle {
     }
 
     public double getWidth() {
-        if (width == 0) {
-            throw new RuntimeException("");
-        }
         return width;
     }
 
     public void setWidth(double width) {
-        if(width == 0.0) {
+        if(width < 0) {
             throw new RuntimeException("it can not be 0");
         }
         this.width = width;
     }
 
     public double getHeight() {
-        if (height == 0) {
-            throw new NullPointerException("");
-        }
         return height;
     }
 
     public void setHeight(double height) {
-        if(height == 0) {
+        if(height < 0) {
             throw new RuntimeException("it can not be 0");
         }
         this.height = height;
