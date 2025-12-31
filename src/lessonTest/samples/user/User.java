@@ -8,7 +8,7 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         setPassword(password);
-        setActive(isActive);
+        isActive = false;
     }
 
     public boolean checkPassword(String password) {
