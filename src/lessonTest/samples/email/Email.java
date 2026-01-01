@@ -11,7 +11,7 @@ public class Email {
     }
 
     public void setEmail(String email) {
-        if (email.isEmpty() || Pattern.matches(regex, email)) {
+        if (email.isEmpty() || !Pattern.matches(regex, email)) {
             throw new NullPointerException("enter you email");
         }
         this.email = email;
