@@ -6,12 +6,12 @@ public class Rectangle {
 
     public Rectangle(double width, double height) {
         setWidth(width);
-        this.setHeight(getHeight());
+        setHeight(height);
     }
 
     public Rectangle(double width) {
         setWidth(width);
-        this.setHeight(getHeight());
+        //this.setHeight(getHeight());
     }
 
     public double getArea() {
