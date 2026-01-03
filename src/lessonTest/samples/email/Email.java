@@ -17,6 +17,23 @@ public class Email {
         this.email = email;
     }
 
+    public String getUsername() {
+        String domain = "@";
+        int index = email.indexOf(domain);
+        if (index == -1) {
+            throw new RuntimeException("don't have any username");
+        }
+        return email.substring(0, index-1);
+    }
+
+    public String getDomain() {
+        String domain = "@";
+        int index = email.indexOf(domain);
+        if (index == -1) {
+            throw new RuntimeException("don't have domain");
+        }
+        return email.substring(index +1);
+    }
 
     public String getEmail() {
         return email;
