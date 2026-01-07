@@ -1,11 +1,5 @@
 package lessonTest.samples.person;
 
-import java.text.DateFormat;
-import java.text.Format;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Formatter;
-
 public class Person {
     private String name;
     private int birthYear;
@@ -19,12 +13,19 @@ public class Person {
         setBirthDay(birthDay);
     }
 
+    public boolean isMinor() {
+        if (getAge() < 18) return true;
+        return false;
+    }
+
     public boolean isAdult() {
         if (getAge() >= 18) return true;
         return false;
     }
 
-
+    public String getBirthDate() {
+        return String.format("%02d.%02d.%04d", getBirthDay(), getBirthMonth(), getBirthYear());
+    }
 
     public int getAge() {
         return 2026 - birthYear;
@@ -73,4 +74,5 @@ public class Person {
     public int getBirthDay() {
         return birthDay;
     }
+
 }
