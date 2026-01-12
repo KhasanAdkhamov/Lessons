@@ -44,7 +44,16 @@ public class TextFile implements Readable, Writable, Searchable{
 
     @Override
     public int countOccurrences(String keyword) {
-        return 0;
+        if (keyword == null || keyword.isEmpty()) {
+            return 0;
+        }
+        int count = 0;
+        int index = 0;
+        while (content.indexOf(keyword, index) != -1){
+            count++;
+            index += keyword.length();
+        }
+        return count;
     }
 
     @Override
