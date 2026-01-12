@@ -8,5 +8,6 @@ public class ProductTest {
         System.out.println(product.getTotalValue());
         product.sell(1);
         product.restock(4);
+        
     }
 }
