@@ -1,6 +1,5 @@
-package work_07_01_26.task;
+package work_07_01_26.homework.task6;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Notification {
@@ -19,11 +18,11 @@ public class Notification {
     }
 
     public String formatMessage() {
-        return recipient + timestamp;
+        return recipient + recipient;
     }
 
     public void displayInfo() {
-        toString();
+        System.out.println(toString());
     }
 
     @Override
