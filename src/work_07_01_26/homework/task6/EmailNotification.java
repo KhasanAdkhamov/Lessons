@@ -4,6 +4,7 @@ public class EmailNotification extends Notification{
     private String subject;
     private String senderEmail;
 
+
     public EmailNotification(String recipient, String message, String subject, String senderEmail) {
         super(recipient, message);
         this.subject = subject;

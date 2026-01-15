@@ -4,9 +4,10 @@ public class PushNotification extends Notification{
     private String appName;
     private boolean withSound;
 
-    public PushNotification(String recipient, String message) {
+    public PushNotification(String recipient, String message, String appName) {
         super(recipient, message);
         withSound = false;
+        this.appName = appName;
     }
 
     @Override
