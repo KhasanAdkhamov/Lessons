@@ -16,16 +16,14 @@ public class NotificationService {
         n.send();
     }
 
-    public void sendBulk(List<Notification> nAll) {
-        for (Notification notification : nAll) {
-            notification.send();
-            System.out.println("массовая рассылка");
+    public void sendBulk(Notification[] notifications) {
+        for (int i = 0; i < notifications.length; i++) {
+            notifications[i].send();
         }
-    }
+        }
 
     public void sendToUser(String user, Notification[] notifications) {
         for (Notification notification : notifications) {
-            notification.send();
             System.out.println(user + " получил уведомление от " + notification.formatMessage());
         }
 

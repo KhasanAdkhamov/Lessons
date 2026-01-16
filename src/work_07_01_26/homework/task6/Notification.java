@@ -18,7 +18,7 @@ public class Notification {
     }
 
     public String formatMessage() {
-        return recipient + message;
+        return recipient + " " + message;
     }
 
     public void displayInfo() {

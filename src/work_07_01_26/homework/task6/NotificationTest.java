@@ -11,6 +11,9 @@ public class NotificationTest {
         notificationService.sendNotification(emailN);
         notificationService.sendNotification(pushNotification);
         notificationService.sendNotification(smsNotification);
-
+        Notification[] notifications = {emailN, pushNotification, smsNotification};
+        notificationService.sendBulk(notifications);
+        System.out.println("метод sendToUser");
+        notificationService.sendToUser("Anna", notifications);
     }
 }
