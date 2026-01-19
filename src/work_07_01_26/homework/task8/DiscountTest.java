@@ -19,6 +19,7 @@ public class DiscountTest {
         System.out.println(shoppingCart.applyDiscount(tieredDiscount));
         System.out.println(tieredDiscount.apply(2000));
         Discount[] discounts = new Discount[]{buyOneGetOneFree, percentDiscount, fixedDiscount, tieredDiscount};
-
+        System.out.println(percentDiscount.apply(100));
+        shoppingCart.applyBestDiscount(discounts);
     }
 }

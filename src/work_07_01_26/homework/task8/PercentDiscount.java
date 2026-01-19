@@ -10,6 +10,6 @@ public class PercentDiscount extends Discount{
 
     @Override
     public double apply(double price) {
-        return price * (1 - percent / 100);
+        return price * (1 - (double)percent/100);
     }
 }

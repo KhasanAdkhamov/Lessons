@@ -14,11 +14,11 @@ public class TieredDiscount extends Discount{
     public double apply(double price) {
         double result = 0.0;
         if (price <= thresholds[0]) {
-            result = price * (1 - discounts[0] / 100);
+            result = price * (1 - (double)discounts[0] / 100);
         } else if (price <= thresholds[1]) {
-            result = price * (1 - discounts[1]/100);
+            result = price * (1 - (double)discounts[1]/100);
         } else if (price <= thresholds[2]) {
-            result = price * (1 - discounts[2] / 100);
+            result = price * (1 - (double)discounts[2] / 100);
         }
         return result;
     }

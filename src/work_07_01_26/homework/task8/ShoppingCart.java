@@ -37,16 +37,16 @@ public class ShoppingCart {
         double bestDiscount = 0;
         for (Discount discount : discounts) {
             double currentDiscount = discount.apply(subtotal);
-            if (bestDiscount < currentDiscount) {
+            if (currentDiscount > bestDiscount) {
                 bestDiscount = currentDiscount;
             }
         }
         this.discountAmount = bestDiscount;
-        System.out.println(bestDiscount);
+        System.out.println(discountAmount);
     }
 
     public double calculateTotal(){
         double subtotal = getSubtotal();
-        return Math.max(0, subtotal = discountAmount);
+        return Math.max(0, subtotal - discountAmount);
     }
 }
