@@ -29,7 +29,7 @@ public abstract class Discount {
         return false;
     }
 
-    public int getDiscountAmount(double price) {
-        return 0;
+    public double getDiscountAmount(double price) {
+        return price - apply(price);
     }
 }
