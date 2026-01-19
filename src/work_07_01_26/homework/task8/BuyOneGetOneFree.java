@@ -9,6 +9,6 @@ public class BuyOneGetOneFree extends Discount{
 
     @Override
     public double apply(double price) {
-        return 0;
+        return price / 2;
     }
 }
