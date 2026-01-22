@@ -1,5 +1,8 @@
 package work_07_01_26.homework.task10;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TransportFactory {
 
     public static Transport createTransport(String type) {
@@ -11,17 +14,27 @@ public class TransportFactory {
             default -> throw new NullPointerException("");
         };
     }
+
+    public static Transport createOptimalTransport(double distance, int passengers) {
+        List<Transport> Transports = List.of(
+                new Bicycle(),
+                new Car(),
+                new Train(),
+                new Plane());
+        Transport optimalTransport = null;
+        double minTime = Double.MAX_VALUE;
+        for (Transport transport : Transports) {
+            if (transport.getCapacity() >= passengers) {
+                double time = transport.travel(distance);
+                if (time < minTime) {
+                    minTime = time;
+                    optimalTransport = transport;
+                    break;
+                }
+            }
+        }
+        return optimalTransport;
     }
 
-//    public static Transport createOptimalTransport(double distance, int passengers) {
-//        if (distance < 15 && passengers < 1) {
-//            return new Bicycle();
-//        } else if (distance < 80 && passengers < 4) {
-//            return new Car();
-//        } else if (distance < 150 && passengers < 30) {
-//            return new Train();
-//        } else {
-//            return new Plane();
-//        }
-//    }
-//}
+    }
+

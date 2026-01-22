@@ -16,7 +16,6 @@ public class Transport {
     }
 
     public double travel(double distance) {
-        System.out.println("время в пути в часах");
         return distance / speed;
     }
 
