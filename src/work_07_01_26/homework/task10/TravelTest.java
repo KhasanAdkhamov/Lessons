@@ -4,5 +4,9 @@ public class TravelTest {
     public static void main(String[] args) {
         System.out.println(TransportFactory.createTransport("car"));
         System.out.println(TransportFactory.createOptimalTransport(100, 4));
+
+        TravelPlanner travelPlanner = new TravelPlanner();
+        travelPlanner.planTrip(100, 4);
+
     }
 }
