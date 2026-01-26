@@ -20,7 +20,7 @@ public class ColoredPoint2 extends Point2{
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(super.hashCode(), color);
     }
 
     public String getColor() {
