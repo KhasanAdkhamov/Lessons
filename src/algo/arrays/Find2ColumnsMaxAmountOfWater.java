@@ -1,0 +1,24 @@
+package algo.arrays;
+
+//Дан массив высот столбиков. Найди два столбика, которые вместе с осью X образуют контейнер, вмещающий максимум воды.
+//Input: [1, 8, 6, 2, 5, 4, 8, 3, 7]
+//
+//Output: 49
+//
+//Explanation: Выбираем столбики с высотами 8 и 7 (индексы 1 и 8),
+//
+//расстояние = 7, высота = min(8,7) = 7, площадь = 7 × 7 = 49
+
+/*
+1) l= 0, r =
+
+ */
+public class Find2ColumnsMaxAmountOfWater {
+    public static void main(String[] args) {
+
+    }
+
+    public static void find(int[] arr) {
+
+    }
+}

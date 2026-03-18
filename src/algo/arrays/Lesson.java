@@ -58,7 +58,7 @@ public class Lesson {
 
         [1,2,3,7]
 
-        1) l3 = 0, r = 3, sum = 8, target = 5
+        1) l = 0, r = 3, sum = 8, target = 5
 
         sum > target -> r--
 

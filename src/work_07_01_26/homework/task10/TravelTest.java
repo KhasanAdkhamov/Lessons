@@ -2,11 +2,11 @@ package work_07_01_26.homework.task10;
 
 public class TravelTest {
     public static void main(String[] args) {
-        System.out.println(TransportFactory.createTransport("car"));
-        System.out.println(TransportFactory.createOptimalTransport(100, 4));
+       // System.out.println(TransportFactory.createTransport("car"));
+       // System.out.println(TransportFactory.createOptimalTransport(100, 10));
 
         TravelPlanner travelPlanner = new TravelPlanner();
-        travelPlanner.planTrip(100, 4);
+        travelPlanner.planTrip(100, 150);
 
     }
 }

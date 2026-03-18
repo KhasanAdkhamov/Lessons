@@ -1,7 +1,6 @@
 package work_07_01_26.homework.task7;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class MediaPlayer {
