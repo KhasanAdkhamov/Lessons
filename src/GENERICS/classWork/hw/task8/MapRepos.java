@@ -18,7 +18,12 @@ public class MapRepos<T, ID> implements Repository<T, ID>{
 
     @Override
     public Map<T, ID> findAll() {
-        return Map.of();
+        if (map == null || map.isEmpty()) {
+            return null;
+        }
+        for (Map.Entry<T, ID> entry : map.entrySet()) {
+            System.out.println(entry);
+        }
     }
 
     @Override
