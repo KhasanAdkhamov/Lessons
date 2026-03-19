@@ -18,12 +18,14 @@ public class MapRepos<T, ID> implements Repository<T, ID>{
 
     @Override
     public Map<T, ID> findAll() {
+        Map map2 = new HashMap();
         if (map == null || map.isEmpty()) {
             return null;
         }
         for (Map.Entry<T, ID> entry : map.entrySet()) {
             System.out.println(entry);
         }
+        return map2;
     }
 
     @Override
