@@ -1,4 +1,4 @@
-package GENERICS.classWork.hw;
+package GENERICS.classWork.hw.task6;
 
 import java.util.HashMap;
 import java.util.Map;

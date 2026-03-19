@@ -1,4 +1,4 @@
-package GENERICS.classWork.hw;
+package GENERICS.classWork.hw.task1_2;
 
 import java.util.ArrayList;
 import java.util.List;

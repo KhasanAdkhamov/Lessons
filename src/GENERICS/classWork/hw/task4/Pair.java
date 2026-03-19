@@ -1,4 +1,4 @@
-package GENERICS.classWork.hw;
+package GENERICS.classWork.hw.task4;
 
 public class Pair <F, S>{
     private F first;

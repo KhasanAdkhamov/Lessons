@@ -1,4 +1,6 @@
-package GENERICS.classWork.hw;
+package GENERICS.classWork.hw.task1_2;
+
+import GENERICS.classWork.hw.task5.GenericMaxMin;
 
 import java.util.ArrayList;
 import java.util.List;

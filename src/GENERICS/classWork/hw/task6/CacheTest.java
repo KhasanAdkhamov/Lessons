@@ -1,4 +1,6 @@
-package GENERICS.classWork.hw;
+package GENERICS.classWork.hw.task6;
+
+import GENERICS.classWork.hw.task4.Pair;
 
 public class CacheTest {
     public static void main(String[] args) {

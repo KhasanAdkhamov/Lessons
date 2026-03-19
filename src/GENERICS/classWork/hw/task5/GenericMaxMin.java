@@ -1,6 +1,5 @@
-package GENERICS.classWork.hw;
+package GENERICS.classWork.hw.task5;
 
-import java.util.Comparator;
 import java.util.List;
 
 public class GenericMaxMin {
