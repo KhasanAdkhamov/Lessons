@@ -1,36 +1,34 @@
 package Files.hw.task2;
 
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.CopyOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 
+
+
+// TODO переделать под побайтовое считывание
 public class CopyFile {
-    public static void main(String[] args) {
-//        try {
-//            Files.createFile(Path.of("./resources/", "text4.txt"));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-        Path path = Path.of("./resources/", "text3.txt");
-        try {
-            int amount = 0;
-            for (String string: Files.readAllLines(path)) {
-                if (!string.isEmpty() || string != null) {
-                    Files.readAllLines(path);
-                    amount++;
+    public static void main(String[] args) throws IOException {
+        Path pathSource = Path.of("./resources/text.poem");
+        Path pathTarget = Path.of("./resources/text3.txt");
+        long size = Files.size(pathSource);
+        long copied = 0;
+        int bufferSize = 256;
+        try (InputStream inputStream = Files.newInputStream(pathSource);
+             OutputStream outputStream = Files.newOutputStream(pathTarget)) {
+                int b;
+                byte[] buffer = new byte[bufferSize];
+                while ((b = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, b);
+                    copied += b;
+                    double percent = (double) copied / size * 100;
+                    System.out.println("процент копирования " + percent);
                 }
-                switch (amount) {
-                    case 1 -> System.out.println("25%");
-                    case 2 -> System.out.println("50%");
-                    case 3 -> System.out.println("75%");
-                    case 4 -> System.out.println("100");
-                    default -> System.out.println("100%");
-                    }
+            System.out.println("процесс завершен");
             }
-            Files.copy(Path.of("./resources/", "text3.txt"), Path.of("./resources/", "text4.txt"), StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
+
+
     }
-}
+// процент = скопированное / общий размер * 100
