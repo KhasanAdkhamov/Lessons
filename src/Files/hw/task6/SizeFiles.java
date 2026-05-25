@@ -28,7 +28,6 @@ public class SizeFiles {
         Long size = 0L;
         try(Stream<Path> walk = Files.walk(scr, 3)) {
             size = walk.filter(Files::isRegularFile)
-                    .filter(p -> p.toString().endsWith("java"))
                     .mapToLong(p -> {
                         try {
                             return Files.size(p);

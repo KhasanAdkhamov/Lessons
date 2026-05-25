@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Scanner;
-
+//TOdo переделать одно слово на другое слово
 public class ChangeA {
     public static void main(String[] args) throws IOException {
         char target = 'а';
@@ -25,3 +25,5 @@ public class ChangeA {
         }
     }
 }
+// папа папа папа
+// папапапапапа

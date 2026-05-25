@@ -13,13 +13,12 @@ public class AmountString {
         //Files.createFile(Path.of("./resources/", "text3.txt"));
         Path path = Path.of("resources","text3.txt");
         Files.write(path, List.of("String1", "String2", "String3"));
-        int amount = 0;
-        for (String string : Files.readAllLines(path)) {
-            if (!string.isEmpty() || string != null) {
-                Files.readAllLines(path);
-                amount++;
-            }
-        }
-        System.out.println(amount);
+//        for (String string : Files.readAllLines(path)) {
+//            if (string != null || !string.isEmpty()) {
+//                Files.readAllLines(path);
+//                amount++;
+//            }
+//        }
+        System.out.println(Files.lines(path).count());
     }
 }

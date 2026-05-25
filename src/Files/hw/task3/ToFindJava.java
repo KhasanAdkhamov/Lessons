@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
-
+// TODO переделать под walk
 public class ToFindJava {
     public static void main(String[] args) throws IOException {
         Path path = Path.of("./src", "algo", "arrays");
