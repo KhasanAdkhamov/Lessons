@@ -23,7 +23,13 @@ public class CopyNewOrModifiedFiles {
                 .filter(Files::isRegularFile)
                 .sorted(Comparator.comparingLong(p-> {
                     try {
-                        return -Files.getLastModifiedTime(p).toMillis();
+                        return -Files.getLastModifiedTime((Path) p).toMillis();
+                    } catch (IOException e) {
+                        return 0L;
+                    }
+                }).thenComparingLong(p-> {
+                    try {
+                        return -Files.size((Path) p);
                     } catch (IOException e) {
                         return 0L;
                     }
@@ -32,7 +38,9 @@ public class CopyNewOrModifiedFiles {
                 .forEach(path1 -> {
                     try {
                         long millis = Files.getLastModifiedTime(path).toMillis();
-                        System.out.println(millis );
+                        long size = Files.size(path);
+                        System.out.println(size);
+                        System.out.println(millis);
                         System.out.println(path1.getFileName());
                     } catch (IOException e) {
                         throw new RuntimeException(e);
