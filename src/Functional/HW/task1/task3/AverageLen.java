@@ -6,7 +6,10 @@ import java.util.OptionalDouble;
 public class AverageLen {
     public static void main(String[] args) {
         List<String> strings = List.of("Hello", "World", "Java", "Stream");
+        List<String>  strings2 = List.of("", "", "");
+
         getAverage(strings);
+        getAverage(strings2);
 
     }
 
