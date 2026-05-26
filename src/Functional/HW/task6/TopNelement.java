@@ -1,4 +1,4 @@
-package Functional.HW.task1.task6;
+package Functional.HW.task6;
 
 import java.util.List;
 import java.util.Map;

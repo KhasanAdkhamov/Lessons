@@ -1,11 +1,8 @@
-package Functional.HW.task1.task4;
+package Functional.HW.task4;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 //Самое длинное слово
 //

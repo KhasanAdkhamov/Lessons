@@ -1,4 +1,4 @@
-package Functional.HW.task1.task3;
+package Functional.HW.task3;
 
 import java.util.List;
 import java.util.OptionalDouble;

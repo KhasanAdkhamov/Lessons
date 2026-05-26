@@ -1,8 +1,7 @@
-package Functional.HW.task1.task2;
+package Functional.HW.task2;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class SortByName {
     public static void main(String[] args) {
